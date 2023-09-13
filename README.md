@@ -27,10 +27,71 @@ To run this project on your local machine, follow these steps:
 
 1. Clone this repository to your local machine:
 
-   ```bash
-   git clone https://github.com/your-username/next-auth-nextjs-13.git
-   ```
-
+```bash
+  git clone https://github.com/mnaji42/nextauth-nextjs13-prisma.git
 ```
 
+2. Navigate to the project directory:
+
+```bash
+  cd nextauth-nextjs13-prisma
 ```
+
+3. Install the project dependencies:
+
+using yarn:
+
+```bash
+  yarn
+```
+
+or using npm:
+
+```bash
+  npm install
+```
+
+### Configuration
+
+1. Create a `.env` file in the root directory of the project and add the following environment variables:
+
+```env
+  NEXTAUTH_SECRET=my_ultra_secure_nextauth_secret
+  NEXTAUTH_URL=http://localhost:3000
+
+  POSTGRES_HOST=127.0.0.1
+  POSTGRES_PORT=6500
+  POSTGRES_USER=admin
+  POSTGRES_PASSWORD=password123
+  POSTGRES_DB=nextauth_prisma
+
+  DATABASE_URL=postgresql://admin:password123@localhost:6500/nextauth_prisma?schema=public
+```
+
+These are example values that work, but you can and should modify them to match your own database and security requirements. Ensure that the NEXTAUTH_SECRET is a secure secret key and that the DATABASE_URL corresponds to your PostgreSQL database connection details.
+
+1. To launch the PostgreSQL database, you can use Docker Compose. If you haven't already, make sur4e you have Docker installed on your machine and run:
+
+```bash
+docker-compose up -d
+```
+
+This command will start the PostgreSQL database container with the provided configuration.
+
+### Run the Application
+
+Start the development server:
+
+using yarn:
+
+```bash
+  yarn dev
+```
+
+or using npm:
+
+```bash
+  npm run dev
+```
+
+The application should now be running locally at http://localhost:3000.
