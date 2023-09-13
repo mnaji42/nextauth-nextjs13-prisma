@@ -4,7 +4,7 @@ This project aims to demonstrate the integration of NextAuth.js authentication i
 
 ## Project Overview
 
-In this project, we have implemented NextAuth.js for authentication within a Next.js 13 application. For this project, we implemented authentication using the Credential Provider, which necessitates a username/email and password for authentication. PostgreSQL was utilized as the database, with Prisma introduced to streamline database interactions.
+In this project, we have implemented NextAuth.js for authentication within a Next.js 13 application. We implemented authentication using the Credential Provider, which necessitates a username/email and password for authentication. PostgreSQL was utilized as the database, with Prisma introduced to streamline database interactions.
 
 ### Key Features
 
@@ -70,7 +70,7 @@ or using npm:
 
 These are example values that work, but you can and should modify them to match your own database and security requirements. Ensure that the NEXTAUTH_SECRET is a secure secret key and that the DATABASE_URL corresponds to your PostgreSQL database connection details.
 
-1. To launch the PostgreSQL database, you can use Docker Compose. If you haven't already, make sur4e you have Docker installed on your machine and run:
+1. To launch the PostgreSQL database, you can use Docker Compose. If you haven't already, make e you have Docker installed on your machine and run:
 
 ```bash
 docker-compose up -d
